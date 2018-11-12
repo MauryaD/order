@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
+        android:text="@string/Quantity"
         android:textAllCaps="true"
         android:textSize="16sp"
         android:layout_marginStart="10dp"
@@ -22,16 +22,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="+"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="10dp"
-        android:onClick="increament"
-        />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="-"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="10dp"
+            android:onClick="decre"
+            />
 
     <TextView
         android:id="@+id/textView"
@@ -40,21 +39,22 @@
         android:text="0"
         android:layout_marginStart="10dp"
         android:textSize="16sp"/>
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="-"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="10dp"
-        android:onClick="decre"
-        />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:layout_marginStart="10dp"
+            android:onClick="increament"
+            />
+
     </LinearLayout>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price= Rs.0"
+        android:text="@string/price_rs_0"
         android:textSize="16sp"
         android:layout_marginStart="10dp"/>
     <Button
@@ -67,6 +67,12 @@
         android:textAllCaps="true"
         android:onClick="Order"/>
 
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click me!!"
+        android:onClick="next"/>
 
 
 </LinearLayout>
