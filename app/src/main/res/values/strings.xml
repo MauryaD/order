@@ -2,6 +2,8 @@
     <string name="app_name">first</string>
     <string name="price_rs_0">Price= Rs.0</string>
     <string name="Quantity">Quantity</string>
+    <string name="toppings">Toppings</string>
+    <string name="whipped_cream">Whipped Cream</string>
 
 
 </resources>
