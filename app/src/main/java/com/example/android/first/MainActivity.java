@@ -2,13 +2,20 @@ package com.example.android.first;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
 
 public class MainActivity extends AppCompatActivity {
+
+    RadioButton radioButton;
+    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         //int quantity=4;
         //System.out.println("Total Price is: ");
         display(quan);
-        displayprice(quan*8);
+        displayprice(quan);
     }
 
     public void increament(View view){
@@ -34,11 +41,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void display(int n){
-        TextView quantityView=(TextView) findViewById(R.id.textView);
-        quantityView.setText("" + n);
+        if (n > 0) {
+            TextView quantityView = (TextView) findViewById(R.id.textView);
+            quantityView.setText("" + n);
+        } else {
+            TextView quantityView = (TextView) findViewById(R.id.textView);
+            quantityView.setText("Please place a valid order");
+        }
     }
+
+    public void tip_calc() {
+        final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radio);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup arg0, int arg1) {
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+                Log.i("ID", String.valueOf(selectedId));
+
+            }
+        });
+    }
+
+
+
+
     private void displayprice(int Num){
+
+        Num = Num * 8;
         TextView price=(TextView) findViewById(R.id.textView2);
         price.setText("Total Price= "+NumberFormat.getCurrencyInstance().format(Num)+ "\n Thank You!!");
+
     }
 }

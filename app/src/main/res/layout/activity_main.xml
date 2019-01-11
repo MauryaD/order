@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quantity"
+        android:textColor="@color/cardview_dark_background"
         android:textAllCaps="true"
         android:textSize="16sp"
         android:layout_marginStart="10dp"
@@ -54,9 +55,46 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price= Rs.0"
         android:textSize="16sp"
         android:layout_marginStart="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Tips:"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%" />
+
+        <RadioButton
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Tip" />
+
+    </RadioGroup>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
